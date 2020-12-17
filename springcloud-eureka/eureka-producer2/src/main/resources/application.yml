@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: eureka-producer     # 服务提供者name要保持一致
+
+server:
+  port: 8105
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/

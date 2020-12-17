@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: hystrix-dashboard-turbine
+
+server:
+  port: 8110
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+    registry-fetch-interval-seconds: 7    # 客户端从服务端抓取服务间隔
+
+# turbine
+turbine:
+  app-config: node01,node02
+  aggregator:
+    clusterConfig: default
+  cluster-name-expression: new String("default")

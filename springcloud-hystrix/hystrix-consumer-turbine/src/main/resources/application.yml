@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: node01
+
+server:
+  port: 8108
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+    registry-fetch-interval-seconds: 7    # 客户端从服务端抓取服务间隔
+
+feign:
+  hystrix:
+    enabled: true   # 开启熔断

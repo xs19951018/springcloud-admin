@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: 8100
+
+eureka:
+  server:
+    enable-self-preservation: false   # 注册中心自我保护机制
+    eviction-interval-timer-in-ms: 10000    # 服务端刷新服务列表的定时器,默认60s
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/
+
