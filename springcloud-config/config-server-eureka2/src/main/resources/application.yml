@@ -1,6 +1,6 @@
 spring:
   application:
-    name: config-server
+    name: config-server-eureka
   cloud:
     config:
       server:
@@ -11,6 +11,9 @@ spring:
           password: xs5412442
 
 server:
-  port: 8111
+  port: 8114
 
-
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/    # 注册中心eureka地址

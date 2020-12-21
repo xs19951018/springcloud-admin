@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-client-rabbitmq2
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port: 8202
+
+management:
+  security:
+    enabled: false  # 刷新时，关闭安全验证
+

@@ -1,0 +1,2 @@
+1.win命令窗口执行post请求
+curl -X POST http://localhost:8002/bus/refresh
