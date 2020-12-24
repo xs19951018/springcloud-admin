@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: gateway-service-zuul
+
+server:
+  port: 8115
+
+# 关闭后使用默认路由：http://ZUUL_HOST:ZUUL_PORT/serviceId/**
+#zuul:
+#  routes:
+#    api-a:
+#      path: /producer/**
+#      serviceId: eureka-producer
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+    registry-fetch-interval-seconds: 7    # 客户端从服务端抓取服务间隔
+
+zuul:
+  retryable: true   # 开启路由重试
+
+ribbon:
+  MaxAutoRetries: 2   # 对当前服务重试次数
+  MaxAutoRetriesNextServer: 0   # 切换相同服务的次数
