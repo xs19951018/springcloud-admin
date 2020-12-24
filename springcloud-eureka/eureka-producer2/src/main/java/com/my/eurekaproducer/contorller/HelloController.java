@@ -12,4 +12,9 @@ public class HelloController {
         String str = "hello " + name + ", this is producer2 message";
         return str;
     }
+
+    @RequestMapping("/foo")
+    public String foo(String foo) {
+        return "hello " + foo + "!!";
+    }
 }
